@@ -6,8 +6,9 @@ import normalize from 'radium-normalize'
 export default class HTML extends Component {
   render() {
     const head = Helmet.rewind()
-    const { css } = this.props
+    const attrs = Object.assign({}, head.htmlAttributes.toComponent())
 
+    const { css } = this.props
     let style
     if (typeof css !== 'undefined') {
       style = [
@@ -15,8 +16,9 @@ export default class HTML extends Component {
         <script dangerouslySetInnerHTML={{__html: `window.__aphrodite__ = ${JSON.stringify(css.renderedClassNames)}`}} />,
       ]
     }
+
     return (
-      <html {...(head.htmlAttributes.toComponent())}>
+      <html {...attrs}>
         <head>
           <meta charSet='utf-8' />
           <meta content='IE=edge' httpEquiv='X-UA-Compatible' />
