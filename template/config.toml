@@ -1,0 +1,26 @@
+black    = '#111111'
+blackest = '#000000'
+white    = '#ffffff'
+
+###
+
+url = 'https://example.com'
+name = ''
+legal_name = ''
+logo = ''
+email = ''
+phone_number = ''
+
+address_city = ''
+address_state = ''
+address_zipcode = ''
+address_street = ''
+address_area = ''
+
+twitter = ''
+twitter_id = ''
+
+###
+
+default_title = ''
+default_description = ''
