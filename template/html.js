@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Style } from 'radium'
 import Helmet from 'react-helmet'
-import normalize from 'radium-normalize'
+const normalize = require('!css?minimize!normalize.css')
 
 export default class HTML extends Component {
   render() {
@@ -30,7 +29,7 @@ export default class HTML extends Component {
           {head.link.toComponent()}
 
           {style}
-          <Style rules={normalize} />
+          <style dangerouslySetInnerHTML={{__html: normalize}} />
         </head>
         <body>
           <div id='react-mount' dangerouslySetInnerHTML={{__html: this.props.body}} />
