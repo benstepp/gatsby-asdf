@@ -1,1 +1,1 @@
-export * from 'gatsby-asdf/helpers'
+export * from 'gatsby-asdf/isomorphic/helpers'
