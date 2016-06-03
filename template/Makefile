@@ -1,4 +1,4 @@
-bucket := 's3://dev.example.com --acl public-read --delete --inl'
+bucket := 's3://dev.example.com'
 
 lint:
 	@node_modules/.bin/eslint "**/*.js"

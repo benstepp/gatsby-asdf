@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import { css, js } from 'assets'
 const normalize = require('!css?minimize!normalize.css')
+const base = require('!css?minimize!base.css')
 
 export default class HTML extends Component {
   render() {
     const head = Helmet.rewind()
     const attrs = Object.assign({}, head.htmlAttributes.toComponent())
 
-    const { css } = this.props
-    let style
-    if (typeof css !== 'undefined') {
-      style = [
-        <style data-aphrodite dangerouslySetInnerHTML={{__html: css.content}}></style>,
-        <script dangerouslySetInnerHTML={{__html: `window.__aphrodite__ = ${JSON.stringify(css.renderedClassNames)}`}} />,
-      ]
-    }
+    const { props } = this
 
     return (
       <html {...attrs}>
@@ -28,12 +23,12 @@ export default class HTML extends Component {
           {head.title.toComponent()}
           {head.link.toComponent()}
 
-          {style}
-          <style dangerouslySetInnerHTML={{__html: normalize}} />
+          <style dangerouslySetInnerHTML={{__html: normalize + base}} />
+          {css(props)}
         </head>
         <body>
           <div id='react-mount' dangerouslySetInnerHTML={{__html: this.props.body}} />
-          <script src='/bundle.js' />
+          {js(props)}
         </body>
       </html>
     )
