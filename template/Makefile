@@ -13,6 +13,7 @@ build:
 deploy:
 	@aws s3 sync public $(bucket) \
 		--acl=public-read \
+		--exclude "*" \
 		--include "*.html" \
 		--delete \
 		--cache-control='max-age=60, must-revalidate'

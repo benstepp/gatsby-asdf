@@ -1,6 +1,6 @@
 {
   "name": "gatsby-asdf",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Gatsby Template",
   "main": "dist/index.js",
   "dependencies": {
@@ -23,7 +23,6 @@
     "normalize.css": "^4.1.1",
     "react-gsap-enhancer": "^0.2.2",
     "react-helmet": "^3.1.0",
-    "react-transition-group-plus": "^0.3.0",
     "scrollmagic": "^2.0.5",
     "sitemap": "^1.6.0"
   },

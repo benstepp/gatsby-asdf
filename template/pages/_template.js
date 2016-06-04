@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import ReactTransitionGroup from 'react-transition-group-plus'
-import Schema from 'components/schema'
-import Helmet from 'components/helmet'
+import Schema from 'components/Schema'
+import Helmet from 'components/Helmet'
 
 export default class Template extends Component {
   render() {
@@ -10,9 +9,9 @@ export default class Template extends Component {
       <div>
         <Helmet location={location} route={route} />
 
-        <ReactTransitionGroup>
+        <main>
           {this.props.children}
-        </ReactTransitionGroup>
+        </main>
 
         <Schema />
       </div>
