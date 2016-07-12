@@ -1,6 +1,6 @@
 {
   "name": "gatsby-asdf",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Gatsby Template",
   "main": "dist/index.js",
   "dependencies": {
